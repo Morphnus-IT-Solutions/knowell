@@ -6,4 +6,4 @@ from imagekit.models import ImageModel
 
 class Banner(ImageModel):
     title = models.CharField(max_length=25)
-    image = models.ImageField(upload_to='images/%Y/%m', storage=upload_storage,blank=True,null=True)
+    image = models.ImageField(upload_to='banner/%Y/%m', storage=upload_storage,blank=True,null=True)
