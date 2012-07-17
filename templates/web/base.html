@@ -12,6 +12,9 @@
             <link href="/media/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
             <link href="/media/css/styling.css" rel="stylesheet" type="text/css" media="screen" />
         {% endblock %}
+
+        {% block js %}
+        {% endblock %}
     </head>
 
     <body background="/media/images/blue-background-hd-i12.jpg">
@@ -72,7 +75,5 @@
             </div>
         </div>
     </body>
-    {% block js %}
-        <script type="text/javascript" src="/adminmedia/js/tiny_mce/tiny_mce.js"></script>
-    {% endblock %}
+    
 </html>

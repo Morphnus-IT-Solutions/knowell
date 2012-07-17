@@ -1,5 +1,26 @@
 {% extends "web/base.html" %}
 
+{% block css %}
+{{block.super}}
+<style>
+    #slider {width: 640px; height: 370px; padding:0; border:0;}
+    #slider img {padding: 0; margin:0; border:0;}
+    #slider .clicker a {width: 11px; height: 11px; background: #CCC; margin-right: 2px; border-radius: 5px; -moz-border-radius: 5px;}
+    #slider .clicker a.active {background: #999;}
+</style>
+{% endblock %}
+
+{% block js %}
+{{block.super}}
+<script src="/media/js/jquery-1.5.2.min.js"></script> 
+<script src="/media/js/jquery.hslide.min.js"></script> 
+<script>
+    $(function(){
+        $('#slider').hslide();
+    });
+</script>
+{% endblock %}
+
 {% block page_title %}
     Welcome
 {% endblock %}
@@ -12,4 +33,19 @@
     {{page.description|safe}} 
 {% endblock %}
 
-
+{% block content %}
+    <div class="centerimage" align="center">
+        <table>
+            <tr>
+                <td>
+                    
+                    <div id="slider">
+                        {% for banner in banners %}
+                        <div><img src="{{banner.image.url}}" width="630px"></img></div>
+                        {% endfor %}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
