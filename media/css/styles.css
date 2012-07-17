@@ -57,7 +57,7 @@ body {
 }
 
 #main_top{
-    background: url(images/main_top.png);
+    background: url(/media/images/main_top.png);
     background-repeat: no-repeat;
     background-position: left;
     height: 12px;
@@ -153,24 +153,24 @@ padding-left: 92px;
         float: left;
 	padding-top: 20px;
 	margin-right: 1px;
-        background: url(images/menu_bg.png);
+        background: url(/media/images/menu_bg.png);
         background-repeat: no-repeat;
         background-position: left top;
 
 }
 
- .action, #menu a:hover{
+.action, #menu a:hover{
 	width: 166px;
-        height: 32px;
+    height: 32px;
 	color: #000000;
-	background: url(images/menu_hov.png);
-        background-repeat: no-repeat;
-        background-position: left top;
+	background: url(/media/images/menu_hov.png);
+    background-repeat: no-repeat;
+    background-position: left top;
 }
 
 
 .main .read{
-    background: url(images/read.png);
+    background: url(/media/images/read.png);
     background-repeat: no-repeat;
     background-position: right top;
     text-align: right;
@@ -196,7 +196,7 @@ padding-left: 92px;
 }
 
 #blog_col{
-    background: url(images/col_bg.png) repeat-y;
+    background: url(/media/images/col_bg.png) repeat-y;
 	vertical-align:middle;
 	margin-top:10px;
 	margin-bottom:15px;
@@ -227,7 +227,7 @@ h1{
 }
 
 #blog_col2{
-    background: url(images/main_bg2.png);
+    background: url(/media/images/main_bg2.png);
     background-repeat: repeat-y;
     background-position: center;
 }
@@ -247,7 +247,7 @@ h1{
 }
 
 .main2 ul li{
-    background: url(images/ls.png);
+    background: url(/media/images/ls.png);
     background-repeat: no-repeat;
     background-position: 0px 4px;
     padding-left: 20px;
@@ -265,7 +265,7 @@ h1{
 }
 
 .main_bot{
-    background: url(images/main_bot.png);
+    background: url(/media/images/main_bot.png);
     background-repeat: no-repeat;
     background-position: left;
     height: 8px;
@@ -301,7 +301,7 @@ h1{
 /*=================================*/
 
 
-#slider-wrapper {
+/*#slider-wrapper {
     background:url(images/top.jpg) no-repeat;
     width: 550px;
     height: 400px;
@@ -369,3 +369,4 @@ a.nivo-prevNav {
     color:#efe9d1;
     text-decoration:underline;
 }
+*/

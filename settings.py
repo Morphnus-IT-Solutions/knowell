@@ -54,7 +54,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-ADMIN_MEDIA_PREFIX = ''
+ADMIN_MEDIA_PREFIX = '/adminmedia/'
 MEDIA_PREFIX = 'media'
 MEDIA_ROOT = os.path.join(SETTINGS_FILE_FOLDER, 'media/')
 UPLOAD_ROOT = '/home/saumil/morphnus/knowell-careers/uploads/u'
