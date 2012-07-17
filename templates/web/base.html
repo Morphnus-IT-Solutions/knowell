@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+{% load web_tags %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>{% block page_title %}Knowell Careers{% endblock %}</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        
+        {% block css %}
+            <link href="/media/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+            <link href="/media/css/styling.css" rel="stylesheet" type="text/css" media="screen" />
+        {% endblock %}
+    </head>
+
+    <body background="/media/images/blue-background-hd-i12.jpg">
+        <div id="back">
+            <div id="footer_bg">
+                <div id="content" style="background-color:#FFF;height:100%;">
+                    <table>
+                	    <tr>
+                    	    <td class="headercontent">
+                                <Table>
+                                    <tr>
+                                        <td align="center">
+                                            <div class="mainlogo">
+                                                {% block header_logo %}
+                                                    {% render_logo request %}
+                                                {% endblock %}
+                                            </div>
+                                        </td>
+                                        <td class="mainheader">
+                                            <div class="mainheadertext" align="center">{% block content_page_title %}{% endblock %}</div>
+                                        </td>
+                                    </tr>
+                                </Table>
+                            </td>
+                        </tr>
+                  	    <tr>
+                    	    <td class="maincontent" valign="top">
+                        	    <div class="maincontentdiv">
+                                    <table border="0">
+                                        <tr>
+                                            <td class="leftcontent" align="center" valign="middle">
+                                                {% block content_page_description %}{% endblock %}
+                                            </td>
+                                            <td class="centercontent" valign="top">
+                                        	    <table>
+                                            	    <tr>
+                                                	    <td>
+                                                            {% block content %}
+                                                            {% endblock %}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                	    <td>
+                                                    	    {% block footer %}
+                                                                {% render_footer request %}
+                                                            {% endblock %}
+                                                        </td>	
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+						    </td>
+                        </tr>
+                    </table>                           
+                </div>
+            </div>
+        </div>
+    </body>
+    {% block js %}
+        <script type="text/javascript" src="/adminmedia/js/tiny_mce/tiny_mce.js"></script>
+    {% endblock %}
+</html>
