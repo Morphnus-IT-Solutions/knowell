@@ -1,4 +1,5 @@
 from django import template
+from django.http import HttpRequest
 
 from web.models import Banner
 
@@ -10,8 +11,3 @@ def render_logo(request):
         logo = logo[0]
     return dict(request=request, logo=logo)
 register.inclusion_tag('web/logo.html')(render_logo)
-
-
-def render_footer(request):
-    return dict(request=request)
-register.inclusion_tag('web/footer.html')(render_footer)

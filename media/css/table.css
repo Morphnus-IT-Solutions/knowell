@@ -1,0 +1,341 @@
+.table-form tr:hover, .table-form1 tr:hover{
+    background:#f4fcfe;
+    
+}
+
+.table-form .odd, .table-form1 .odd, .table-result .odd{
+    background:#f8f8f8;
+}
+
+.table-form .odd:hover, .table-form1 .odd:hover{
+    background:#f5f5f5;
+}
+
+.table-form{
+    margin:0 0 10px 0;
+    /*border:5px solid #666666;*/
+    -moz-border-radius: 8px;
+	
+   /* text-transform:uppercase;*/
+    
+
+}
+
+
+.table-form th{
+    
+    padding:3px 0 3px 3px;
+    vertical-aign:top;
+    
+    border-left:1px solid #e8e8e8;
+    
+    font-size:12px;
+    text-align:left;
+    color:#000000;
+    
+
+}
+
+.table-form .td{
+
+    font-size:12px;
+    color:#333333;
+    padding:3px 0 3px 3px;
+    vertical-aign:top;
+    text-align:center;
+    border-left:1px solid #e8e8e8;
+    text-transform:uppercase;
+    
+    
+}
+
+.textfield{
+
+   border-radius:5px;
+-moz-border-radius: 5px;
+height:20px;
+ width:150px;   
+    
+}
+
+.textfield1{
+
+   border-radius:5px;
+-moz-border-radius: 5px;
+height:20px;
+ width:300px;   
+    
+}
+
+.textarea{
+ width:150px;   
+   border-radius:5px;
+-moz-border-radius: 5px;
+    
+    
+}
+
+.table-result{
+    margin:0 0 10px 0;
+/*    border:1px solid #000000;
+*/    -moz-border-radius:8px;
+/*    text-align:left;
+    cell-spacing:2px;
+    background-color:#DDDDFF;
+    background-position:top;
+    border:1px solid #CCCCEE;
+    border-bottom:1px solid #e8e8e8;
+    -moz-border-radius:8px;
+*/}
+
+.table-form tr,.table-result tr{
+    background:#fafeff;
+}
+
+.table-result th,.table-form th{
+    background-image:url(../images/level2Bg.gif);
+    height:26px;
+    border:1px solid #CCCCEE;
+    background-repeat:repeat-x;
+    background-position:bottom;
+    background-color:#FFFFFF;
+}
+
+.table-form1 th{
+    background-image:url(../images/level2Bg.gif);
+    height:26px;
+    border:1px solid #CCCCEE;
+    background-repeat:repeat-x;
+    background-position:bottom;
+    background-color:#FFFFFF;
+	border-bottom:1px solid #CCCCCC
+}
+
+.table-result td,table-form td{
+    padding:3px 0 3px 3px;
+    height:25px;
+    vertical-align:top;
+    text-align:left;
+    border:1px solid #CCCCEE;
+    /*border-bottom:1px solid #CCCCCC;*/
+    color:#010000;
+}
+
+
+/*         End Neww CSS              */
+/*
+.table-form .left-th, .table-form1 .left-th{
+    padding:3px 0 3px 3px;
+    vertical-align:top;
+    text-align:left;
+    background:#e3f9ff;
+    border-bottom:1px solid #e8e8e8;
+    font-weight:bold;
+}
+*/
+.table-form td{
+    padding:3px 0 3px 3px;
+    vertical-align:middle;
+    text-align:left;
+   /* border-bottom:1px solid #CCCCCC;*/
+    color:#000000;
+    font-size:12px;
+	font-weight:bold;
+}
+
+.table-form1 td{
+    padding:3px 0 3px 3px;
+    vertical-align:top;
+    text-align:center;
+    /*border-bottom:1px solid #CCCCCC;*/
+    color:#000000;
+    font-size:12px;
+}
+
+
+.table-form .td tabel{
+    width:100%;
+    text-align:center;
+}
+
+.table-form .td tr{
+    background:none;
+}
+
+input[type=text] {
+font-weight:bold;
+}
+
+textarea{
+font-weight:bold;
+font-size:14px;
+}
+
+
+
+.table-form .td td{
+    border:0;
+}
+
+.table-form ul{
+    margin:0;
+    padding:0;
+}
+
+.table-form li{
+    list-style:none;
+    float:left;
+    margin:0 10px 0 0;
+    font-size:12px;
+}
+/*
+.table-result, .table-result1{
+    margin:0 0 10px 0;
+    border:1px solid #e9e9e9;
+    background:url(../images/homePageSeperator.gif) top left  no-repeat;
+}
+*/
+.table-result1,.table-form1{
+    margin:0;
+    padding:4px 0 0 3px;
+}
+
+.table-form .head, .table-form .head:hover, .table-result .head:hover, .table-result1 .head, .table-result1 .head:hover{
+    background:url(../images/bg-head.jpg) left top repeat-x #b4ecfb;
+}
+
+.table-form .tdclass{
+    -moz-border-radius:8px;
+}
+/*
+.table-form .head th, .table-result th, .table-result1 th{
+    padding:5px;
+    text-align:left;
+}
+*/
+.table-result1 th{
+    font-weight:bold;
+}
+/*
+.table-result tr, .table-result1 tr{
+    background:#fafeff;
+}
+*/
+.table-result tr:hover, .table-result1 tr:hover{
+    background:#fff;
+}
+/*
+.table-result td, .table-result1 td{
+    padding:4px 0 4px 4px;
+    border-top:1px solid #e8e8e8;
+    text-align:left;
+}
+*/
+.table-result input, .table-result1 input{
+    margin:0 0 0 5px;
+}
+
+.table-form a, .table-result a, .table-result1 a{
+    color:#16788d;
+    font-weight:bold;
+    /*text-decoration:underline;*/
+}
+
+.table-form a:hover, .table-result a:hover, .table-result1 a:hover{
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+/* Pagination CSS  */
+/* tnt-pagination */
+#tnt_pagination {
+    display:block;
+    text-align:left;
+    height:22px;
+    line-height:21px;
+    clear:both;
+    padding-top:3px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+}
+
+#tnt_pagination a:link, #tnt_pagination a:visited{
+    padding:7px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border:1px solid #EBEBEB;
+    margin-left:10px;
+    text-decoration:none;
+    background-color:#F5F5F5;
+    color:#0072bc;
+    width:22px;
+    font-weight:normal;
+}
+
+#tnt_pagination a:hover {
+    background-color:#DDEEFF;
+    border:1px solid #BBDDFF;
+    color:#0072BC;    
+}
+
+#tnt_pagination .active_tnt_link {
+    padding:7px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border:1px solid #BBDDFF;
+    margin-left:10px;
+    text-decoration:none;
+    background-color:#DDEEFF;
+    color:#0072BC;
+    cursor:default;
+}
+
+#tnt_pagination .disabled_tnt_pagination {
+    padding:7px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border:1px solid #EBEBEB;
+    margin-left:10px;
+    text-decoration:none;
+    background-color:#F5F5F5;
+    color:#D7D7D7;
+    cursor:default;
+}
+
+
+	.content {
+			overflow:auto;
+			width: 200px;
+			hight: 400px;
+		}
+
+
+
+/*========================================================================================================================================*/
+	
+		
+.table-form td .down{
+	padding:0 0 0 25px;
+	/*background:url(../images/arrow-red.gif) left center no-repeat;*/
+	background:url(../images/down_arrow.gif) left center no-repeat;
+	/*background: white url(../images/arrow-red.gif) repeat-x 0 10px;*/
+
+}
+
+
+.table-form td .up{
+	padding:0 0 0 25px;
+	/*background:url(../images/arrow-green.gif) left center no-repeat;*/
+	background:url(../images/up_arrow.gif) left center no-repeat;
+}
+
+.table-form td .eqal{
+	padding:0 0 0 25px;
+	background:url(../images/eqal.gif) left center no-repeat;
+	}

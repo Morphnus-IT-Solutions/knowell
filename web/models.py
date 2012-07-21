@@ -22,8 +22,10 @@ class Banner(ImageModel):
 class Page(models.Model):
     title = models.CharField(max_length=200)
     description = HTMLField()
+    image = models.ImageField(upload_to='page/%Y/%m', storage=upload_storage,blank=True,null=True)
     page = models.CharField(max_length=25, unique=True, choices=(
         ('home', 'Home Page'),
         ('welcome', 'Welcome'),
+        ('student', 'Student Registration'),
     ),
     default = 'welcome', db_index=True)

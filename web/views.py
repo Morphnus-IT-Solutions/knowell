@@ -26,6 +26,8 @@ def welcome(request):
     ctxt = {
         'banners': banners,
         'page': page,
+        'prev': "/",
+        'next': "/student-registration/"
     }
     return render_to_response('web/welcome.html',
             ctxt,

@@ -30,7 +30,9 @@
 {% endblock %}
 
 {% block content_page_description %}
+    <div class="leftcontent">
     {{page.description|safe}} 
+    </div>
 {% endblock %}
 
 {% block content %}
@@ -38,7 +40,6 @@
         <table>
             <tr>
                 <td>
-                    
                     <div id="slider">
                         {% for banner in banners %}
                         <div><img src="{{banner.image.url}}" width="630px"></img></div>

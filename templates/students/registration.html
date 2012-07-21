@@ -1,0 +1,154 @@
+{% extends "web/base.html" %}
+
+{% block css %}
+{{block.super}}
+    <link href="/media/css/table.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/media/css/nivo-slider.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        .table-form input[type="text"] {
+            border-radius: 5px;
+            height: 20px;
+            width: 150px;
+        }
+
+        textarea {
+            width: 150px;
+            border-radius: 5px;
+            height: 35px;
+        }
+
+        select {
+            border-radius: 5px;
+            height: 20px;
+            width: 150px;
+        }
+    </style>
+{% endblock %}
+
+{% block page_title %}
+    Student Registration
+{% endblock %}
+
+{% block content_page_title %}
+    {{page.title}}        
+{% endblock %}
+
+{% block content_page_description %}
+    {% if page.image %}
+        <td class="leftcontentnobg">
+            <img src="{{page.image.url}}" style="width:250px; height:300px;"/>
+        </td>
+    {% else %}
+        <div class="leftcontent">
+        {{page.description|safe}}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="centerimage1">
+        <table>
+            <tr>
+                <td>
+                    <form name="studreg" id="studreg" action="Sectionintro.html" method="post">
+                        <table width="690px" height="400px" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <table class="table-form">
+                                        <th colspan="2" style="font-family:Calibri, 'Lucida Calligraphy', 'Goudy Old Style'; font-size:18px; font-weight:bold; color:#0E86C0;">Personal Information</th>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.first_name.label}}</td>
+                                            <td>{{form.first_name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.middle_name.label}}</td>
+                                            <td>{{form.middle_name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.last_name.label}}</td>
+                                            <td>{{form.last_name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.date_of_birth.label}}</td>
+                                            <td>{{form.date_of_birth}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.gender.label}}</td>
+                                            <td>{{form.gender}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2" style="font-family:Calibri, 'Lucida Calligraphy', 'Goudy Old Style'; font-size:18px; font-weight:bold; color:#0E86C0;">Academic Information</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.education_institution.label}}</td>
+                                            <td>{{form.education_institution}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.standard.label}}</td>
+                                            <td>{{form.standard}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.stream.label}}</td>
+                                            <td>{{form.stream}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.last_exam_appeared.label}}</td>
+                                            <td>{{form.last_exam_appeared}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.marks_expected_actual.label}}</td>
+                                            <td>{{form.marks_expected_actual}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top">
+                                    <table class="table-form">
+                                        <th colspan="2" style="font-family:Calibri, 'Lucida Calligraphy', 'Goudy Old Style'; font-size:18px; font-weight:bold; color:#0E86C0;">Contact Details</th>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.phone_number.label}}</td>
+                                            <td>{{form.phone_number}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.email.label}}</td>
+                                            <td>{{form.email}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.address.label}}</td>
+                                            <td>{{form.address}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.city.label}}</td>
+                                            <td>{{form.city}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.pincode.label}}</td>
+                                            <td>{{form.pincode}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.guardian_name.label}}</td>
+                                            <td>{{form.guardian_name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="studregformlabel">{{form.guardian_contact_number.label}}</td>
+                                            <td>{{form.guardian_contact_number}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2" style="font-family:Calibri, 'Lucida Calligraphy', 'Goudy Old Style'; font-size:18px; font-weight:bold; color:#0E86C0;">Top 3 Career Aspirations</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                {{form.career_aspiration_1.label}} {{form.career_aspiration_1}}<br />
+                                                {{form.career_aspiration_2.label}} {{form.career_aspiration_2}}<br />
+                                                {{form.career_aspiration_3.label}} {{form.career_aspiration_3}}<br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
