@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     'south',
     'imagekit',
     'web',
+    'students',
 )
 
 # A sample logging configuration. The only tangible logging
