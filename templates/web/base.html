@@ -10,9 +10,11 @@
         {% block css %}
             <link href="/media/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
             <link href="/media/css/styling.css" rel="stylesheet" type="text/css" media="screen" />
+            <link href="/media/css/common.css" rel="stylesheet" type="text/css" media="screen" />
         {% endblock %}
 
         {% block js %}
+            <script type="text/javascript" src="/media/js/jquery-1.4.3.min.js" charset="utf-8"></script>
         {% endblock %}
     </head>
 
@@ -74,4 +76,6 @@
             </div>
         </div>
     </body>
+    {% block script_footer %}
+    {% endblock %}
 </html>

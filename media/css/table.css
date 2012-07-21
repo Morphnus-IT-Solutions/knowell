@@ -93,7 +93,6 @@ height:20px;
 }
 
 .table-result th,.table-form th{
-    background-image:url(../images/level2Bg.gif);
     height:26px;
     border:1px solid #CCCCEE;
     background-repeat:repeat-x;
@@ -102,7 +101,6 @@ height:20px;
 }
 
 .table-form1 th{
-    background-image:url(../images/level2Bg.gif);
     height:26px;
     border:1px solid #CCCCEE;
     background-repeat:repeat-x;
@@ -201,7 +199,7 @@ font-size:14px;
 }
 
 .table-form .head, .table-form .head:hover, .table-result .head:hover, .table-result1 .head, .table-result1 .head:hover{
-    background:url(../images/bg-head.jpg) left top repeat-x #b4ecfb;
+    background:url(/media/images/bg-head.jpg) left top repeat-x #b4ecfb;
 }
 
 .table-form .tdclass{
@@ -323,7 +321,7 @@ font-size:14px;
 .table-form td .down{
 	padding:0 0 0 25px;
 	/*background:url(../images/arrow-red.gif) left center no-repeat;*/
-	background:url(../images/down_arrow.gif) left center no-repeat;
+	background:url(/media/images/down_arrow.gif) left center no-repeat;
 	/*background: white url(../images/arrow-red.gif) repeat-x 0 10px;*/
 
 }
@@ -332,10 +330,10 @@ font-size:14px;
 .table-form td .up{
 	padding:0 0 0 25px;
 	/*background:url(../images/arrow-green.gif) left center no-repeat;*/
-	background:url(../images/up_arrow.gif) left center no-repeat;
+	background:url(/media/images/up_arrow.gif) left center no-repeat;
 }
 
 .table-form td .eqal{
 	padding:0 0 0 25px;
-	background:url(../images/eqal.gif) left center no-repeat;
+	background:url(/media/images/eqal.gif) left center no-repeat;
 	}

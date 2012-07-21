@@ -9,6 +9,9 @@ from tinymce.models import HTMLField
 class Standard(models.Model):
     standard = models.CharField(max_length=20)
 
+    def __unicode__(self):
+        return self.standard
+
 class Stream(models.Model):
     stream = models.CharField(max_length=20)
 
@@ -27,9 +30,9 @@ class Student(models.Model):
     stream = models.ForeignKey(Stream, blank=True, null=True)
     last_exam_appeared = models.CharField(max_length=100, blank=True, null=True)
     marks_expected_actual = models.CharField(max_length=100, blank=True, null=True, verbose_name="Marks (Expected/Actual)")
-    phone_number = models.CharField(max_length=30, blank=True, null=True)
-    email = models.CharField(max_length=200, blank=True, null=True)
-    address = models.TextField()
+    phone_number = models.CharField(max_length=30, default='')
+    email = models.CharField(max_length=200, default='')
+    address = models.TextField(blank=True, null=True)
     city = models.CharField(max_length=30, blank=True, null=True)
     pincode = models.IntegerField(max_length=6, blank=True, null=True)
     guardian_name = models.CharField(max_length=30, blank=True, null=True)

@@ -1,0 +1,17 @@
+.errornote {
+    font-size: 12px !important;
+    display: block;
+    padding: 4px 5px 4px 25px;
+    margin: 0 0 3px 0;
+    border: 1px solid red;
+    color: red;
+    background: #FFC url(/media/images/icon_error.gif) 5px .3em no-repeat;
+}
+
+.errors {
+    background: #FE9A2E !important;
+}
+
+.red {
+    color: red;
+}

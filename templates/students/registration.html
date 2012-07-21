@@ -35,7 +35,7 @@
 
 {% block content_page_description %}
     {% if page.image %}
-        <td class="leftcontentnobg">
+        <td class="leftcontentnobg" valign="top">
             <img src="{{page.image.url}}" style="width:250px; height:300px;"/>
         </td>
     {% else %}
@@ -47,25 +47,31 @@
 
 {% block content %}
     <div class="centerimage1">
+        {% if errors %}
+            <p class="errornote">
+                Please enter all mandatory fields.
+            </p>
+        {% endif %}
         <table>
             <tr>
                 <td>
-                    <form name="studreg" id="studreg" action="Sectionintro.html" method="post">
+                    <form name="studreg" id="studreg" action="/student-registration/" method="post">
+                        {% csrf_token %}
                         <table width="690px" height="400px" border="0">
                             <tr>
                                 <td valign="top">
                                     <table class="table-form">
                                         <th colspan="2" style="font-family:Calibri, 'Lucida Calligraphy', 'Goudy Old Style'; font-size:18px; font-weight:bold; color:#0E86C0;">Personal Information</th>
-                                        <tr>
-                                            <td class="studregformlabel">{{form.first_name.label}}</td>
+                                        <tr {% if form.first_name.errors %}class="errors"{% endif %}>
+                                            <td class="studregformlabel">{{form.first_name.label}} <span class="red">*</span></td>
                                             <td>{{form.first_name}}</td>
                                         </tr>
                                         <tr>
                                             <td class="studregformlabel">{{form.middle_name.label}}</td>
                                             <td>{{form.middle_name}}</td>
                                         </tr>
-                                        <tr>
-                                            <td class="studregformlabel">{{form.last_name.label}}</td>
+                                        <tr {% if form.last_name.errors %}class="errors"{% endif %}>
+                                            <td class="studregformlabel">{{form.last_name.label}} <span class="red">*</span></td>
                                             <td>{{form.last_name}}</td>
                                         </tr>
                                         <tr>
@@ -83,8 +89,8 @@
                                             <td class="studregformlabel">{{form.education_institution.label}}</td>
                                             <td>{{form.education_institution}}</td>
                                         </tr>
-                                        <tr>
-                                            <td class="studregformlabel">{{form.standard.label}}</td>
+                                        <tr {% if form.standard.errors %}class="errors"{% endif %}>
+                                            <td class="studregformlabel">{{form.standard.label}} <span class="red">*</span></td>
                                             <td>{{form.standard}}</td>
                                         </tr>
                                         <tr>
@@ -104,12 +110,12 @@
                                 <td valign="top">
                                     <table class="table-form">
                                         <th colspan="2" style="font-family:Calibri, 'Lucida Calligraphy', 'Goudy Old Style'; font-size:18px; font-weight:bold; color:#0E86C0;">Contact Details</th>
-                                        <tr>
-                                            <td class="studregformlabel">{{form.phone_number.label}}</td>
+                                        <tr {% if form.phone_number.errors %}class="errors"{% endif %}>
+                                            <td class="studregformlabel">{{form.phone_number.label}} <span class="red">*</span></td>
                                             <td>{{form.phone_number}}</td>
                                         </tr>
-                                        <tr>
-                                            <td class="studregformlabel">{{form.email.label}}</td>
+                                        <tr {% if form.email.errors %}class="errors"{% endif %}>
+                                            <td class="studregformlabel">{{form.email.label}} <span class="red">*</span></td>
                                             <td>{{form.email}}</td>
                                         </tr>
                                         <tr>
@@ -151,4 +157,32 @@
             </tr>
         </table>
     </div>
+{% endblock %}
+
+{% block footer %}
+<div class="centertimer" align="center">
+    <table>
+        <tr>
+            <td class="leftimage" align="center">
+                <a href="{{prev|default:"/"}}"><img src="/media/images/back.png" width="110px" /></a>
+            </td>
+            <td class="timerimage">
+                
+            </td>
+            <td class="rightimage" align="center">
+                <img src="/media/images/Next.png" width="110px" class="submit-form"/>
+            </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+
+{% block script_footer %}
+   <script type="text/javascript">
+    $(document).ready(function() {
+        $(".submit-form").click(function(){
+            $("#studreg").submit(); 
+        });
+    });
+   </script>
 {% endblock %}
