@@ -15,10 +15,19 @@ class LevelOfDifficulty(models.Model):
     def __unicode__(self):
         return self.level
 
+
+class SectionGroup(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __unicode__(self):
+        return self.name
+
+
 class Section(models.Model):
     class Meta:
         unique_together = ('name', 'type',)
     name = models.CharField(max_length=50)
+    group = models.ForeignKey(SectionGroup)
     type = models.CharField(max_length=25, choices=(
             ('mcq', 'MCQ'),
             ('personality', 'Personality'),

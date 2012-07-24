@@ -7,11 +7,16 @@ class LevelOfDifficultyAdmin(admin.ModelAdmin):
     list_display = ('level',)
 admin.site.register(LevelOfDifficulty, LevelOfDifficultyAdmin)
 
+class SectionGroupAdmin(admin.ModelAdmin):
+    search_fields = ['name']
+    list_display = ('name',)
+    list_filter = ('name',)
+admin.site.register(SectionGroup, SectionGroupAdmin)
 
 class SectionAdmin(admin.ModelAdmin):
     search_fields = ['name']
-    list_display = ('name', 'type',)
-    list_filter = ('name',)
+    list_display = ('name', 'group', 'type',)
+    list_filter = ('group__name',)
 admin.site.register(Section, SectionAdmin)
 
 class TestSectionsInline(admin.TabularInline):
