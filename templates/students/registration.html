@@ -4,6 +4,7 @@
 {{block.super}}
     <link href="/media/css/table.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="/media/css/nivo-slider.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/media/css/jquery-ui-1.8.2.custom.css" rel="stylesheet" type="text/css" media="screen" />
     <style>
         .table-form input[type="text"] {
             border-radius: 5px;
@@ -23,6 +24,11 @@
             width: 150px;
         }
     </style>
+{% endblock %}
+
+{% block js %}
+{{block.super}}
+    <script type="text/javascript" src="/media/js/jquery-ui-1.8.2.custom.min.js" charset="utf-8"></script>
 {% endblock %}
 
 {% block page_title %}
@@ -182,6 +188,12 @@
     $(document).ready(function() {
         $(".submit-form").click(function(){
             $("#studreg").submit(); 
+        });
+
+        $('#id_date_of_birth').datepicker({dateFormat: 'dd-mm-yy',
+            onSelect: function(){
+                $('#id_date_of_birth').datepicker('enable');
+            },
         });
     });
    </script>
