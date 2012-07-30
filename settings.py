@@ -137,6 +137,7 @@ INSTALLED_APPS = (
     'web',
     'students',
     'test',
+    'question',
 )
 
 # A sample logging configuration. The only tangible logging

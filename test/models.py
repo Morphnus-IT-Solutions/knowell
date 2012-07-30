@@ -55,3 +55,4 @@ class TestSections(models.Model):
     section = models.ForeignKey(Section)
     level_of_difficulty = models.ForeignKey(LevelOfDifficulty)
     total_questions = models.IntegerField(max_length=3)
+    section_score = models.IntegerField(max_length=3, blank=True, null=True)
