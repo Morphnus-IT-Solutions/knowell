@@ -3,17 +3,11 @@ from storage import upload_storage
 from imagekit.models import ImageModel
 from south.modelsinspector import add_introspection_rules
 from tinymce.models import HTMLField
+from decimal import Decimal
 
+from test.models import Test, Section, Standard, Stream
+from question.models import Question, Option
 # Create your models here.
-
-class Standard(models.Model):
-    standard = models.CharField(max_length=20)
-
-    def __unicode__(self):
-        return self.standard
-
-class Stream(models.Model):
-    stream = models.CharField(max_length=20)
 
 class Student(models.Model):
     first_name = models.CharField(max_length=30, db_index=True)
@@ -40,3 +34,28 @@ class Student(models.Model):
     career_aspiration_1 = models.CharField(max_length=50, blank=True, null=True, verbose_name="1.")
     career_aspiration_2 = models.CharField(max_length=50, blank=True, null=True, verbose_name="2.")
     career_aspiration_3 = models.CharField(max_length=50, blank=True, null=True, verbose_name="3.")
+
+
+class StudentTest(models.Model):
+    student = models.ForeignKey(Student)
+    test = models.ForeignKey(Test)
+    created_on = models.DateTimeField(auto_now_add=True)
+    started_at = models.DateTimeField(blank=True, null=True)
+    ended_at = models.DateTimeField(blank=True, null=True)
+    total_score = models.IntegerField(max_length=3)
+    score_acquired = models.IntegerField(max_length=3, blank=True, null=True)
+
+
+class StudentTestSectionDetail(models.Model):
+    studenttest = models.ForeignKey(StudentTest)
+    section = models.ForeignKey(Section)
+    time = models.IntegerField(max_length=3, verbose_name="Time (in minutes)", default=Decimal('0')) 
+    score = models.IntegerField(max_length=3, default=Decimal('0'))
+
+class StudentTestDetail(models.Model):
+    studenttest = models.ForeignKey(StudentTest)
+    question = models.ForeignKey(Question)
+    question_score = models.IntegerField(max_length=3, blank=True, null=True)
+    correct_answer = models.CharField(max_length=100, blank=True, null=True)
+    answer = models.CharField(max_length=100, blank=True, null=True)
+    answer_score = models.IntegerField(max_length=3, blank=True, null=True)

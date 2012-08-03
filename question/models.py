@@ -13,6 +13,7 @@ class Question(ImageModel):
     level_of_difficulty = models.ForeignKey(LevelOfDifficulty)
     image = models.ImageField(upload_to='question/%Y/%m', storage=upload_storage,blank=True,null=True)
     score = models.IntegerField(max_length=3, null=True, blank=True)
+    is_active = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.question
@@ -22,7 +23,8 @@ class Option(models.Model):
     question = models.ForeignKey(Question)
     option = models.CharField(max_length=50)
     is_correct = models.BooleanField(default=False)
-
+    characteristics = models.CharField(max_length=100, null=True, blank=True)
+    score = models.IntegerField(max_length=3, null=True, blank=True)
 
     def __unicode__(self):
         return "%s - %s" %(self.option, self.question)
@@ -30,7 +32,7 @@ class Option(models.Model):
 
 class Characteristics(models.Model):
     question = models.ForeignKey(Question)
-    characteristics = models.CharField(max_length=50)
+    characteristics = models.CharField(max_length=100)
 
     def __unicode__(self):
-        return "%s - %s" %(self.option, self.question)
+        return "%s - %s" %(self.characteristics, self.question)
